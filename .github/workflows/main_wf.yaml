@@ -1,0 +1,11 @@
+name: main_wf
+on: [push]
+jobs:
+  print-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Cat using echo
+        run: echo "$(<art.txt)"
+      - name: Cat using cat
+        run: cat art.txt
